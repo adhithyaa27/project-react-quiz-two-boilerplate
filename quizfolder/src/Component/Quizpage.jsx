@@ -32,18 +32,27 @@ class Quiz extends Component{
         const qno = this.state.qno
         return(
             <div className="quiz">
-                <h1>Question</h1>
-                <p id="questionNumber">{qno + 1} of 15</p>
-                <h4 id="question">{questions[qno].question}</h4>
-                <div id="Optionbuttons">
+                <div id="Question">Question</div>
+
+                <p id="Qnum">{qno + 1} of 15</p>
+
+                <h2 id="questions">{questions[qno].question}</h2>
+
+                <div id="Options">
                     <button>{questions[qno].optionA}</button>
+
                     <button>{questions[qno].optionB}</button>
+                    
                     <button>{questions[qno].optionC}</button>
+                    
                     <button>{questions[qno].optionD}</button>
                 </div>
-                <div id ='navigation'>
+                
+                <div id ='navbar'>
                     <button id='prevBtn' onClick={this.previous}>Previous</button>
+                    
                     <button id='nextBtn' onClick={this.next}>Next</button>
+                    
                     <button id='quitBtn' onClick={this.quit}>Quit</button>
                 </div>
             </div>
